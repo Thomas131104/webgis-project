@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebGIS for Entertainment</title>
+
+  <link rel="stylesheet" href="../template/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../template/css/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    #map {
+      height: 100vh;
+    }
+
+    .label {
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+    }
+
+    .radius-group {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    form button {
+      margin-top: 1rem;
+    }
+
+    #result-table-container {
+      width: 90%;
+      max-width: 500px;
+      margin: 2rem auto 0;
+      background: white;
+      max-height: 300px;
+      overflow-y: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h3 class="label">Chủ đề: Bản đồ địa điểm giải trí</h3>
+  </header>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4 bg-light p-3">
+
+          <a href="/webgis_project/" class="btn">Trang chủ</a>
+
+          <form id="input">
+            <label for="radius">Nhập bán kính:</label>
+            <div class="radius-group">
+              <input type="number" name="radius" id="radius" min="0" step="any" required />
+              <select name="meter" id="meter" aria-label="Chọn đơn vị đo" title="Chọn đơn vị đo">
+                <option value="kilometer">km</option>
+                <option value="meter">m</option>
+              </select>
+            </div>
+
+            <label for="type">Chọn đối tượng:</label>
+            <select name="type" id="type" required>
+              <option value="" selected disabled>None</option>
+              <option value="sports">Thể thao</option>
+              <option value="pool">Hồ bơi</option>
+              <option value="gym">Phòng gym / thể hình</option>
+              <option value="resort">Resort / Khu nghỉ dưỡng</option>
+              <option value="stadium">Sân vận động</option>
+              <option value="park">Công viên</option>
+              <option value="beach">Bãi biển</option>
+              <option value="picnic">Khu dã ngoại</option>
+            </select>
+
+            <label for="quantile">Số lượng:</label>
+            <input type="number" name="quantile" id="quantile" min="1" value="5" required />
+
+            <button type="submit">Truy xuất</button>
+          </form>
+
+          <div id="result-table-container">
+            <table id="result-table" class="table table-bordered table-sm mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Tên</th>
+                  <th>Khoảng cách (m)</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-8 p-0">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="text-center py-2">
+    <h3 class="label">&copy; Nhóm 7</h3>
+  </footer>
+
+  <script src="../template/js/bootstrap.bundle.min.js"></script>
+  <script src="../template/js/leaflet.js"></script>
+  <script src="./showingMap.js"></script>
+  <script src="./extractingToJson.js"></script>
+</body>
+</html>

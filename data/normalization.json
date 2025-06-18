@@ -1,0 +1,30 @@
+{
+    "sports" : {
+        "column" : "sports",
+        "link" : "images/icon/sports.png"
+    }, 
+    "gym" : {
+        "column" : "fitness_centre",
+        "link" : "images/icon/dumbbell.png"
+    },
+    "resort" : {
+        "column" : "resort",
+        "link" : "images/icon/resort.png"
+    },
+    "stadium" : {
+        "column" : "stadium",
+        "link" : "images/icon/stadium.png"
+    },
+    "park" : {
+        "column" : "park",
+        "link" : "images/icon/park.png"
+    },
+    "picnic" : {
+        "column" : "picnic",
+        "link" : "images/icon/picnic-table.png"
+    },
+    "pool" : {
+        "column" : "pool",
+        "link" : "images/icon/swimming-pool.png"
+    }
+}

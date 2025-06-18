@@ -1,0 +1,12 @@
+# File cá nhân, không cần đưa lên Git
+how_i_work.md
+
+# Cấu hình môi trường cục bộ
+.vscode/
+
+# Tài liệu nội bộ, hướng dẫn
+docs/
+screenshot/
+
+# Tệp cấu hình nhạy cảm (chứa thông tin đăng nhập)
+data/admin.ini

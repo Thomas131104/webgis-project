@@ -1,0 +1,80 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid, .row {
+    height: 100%;
+}
+
+.col-6 {
+    height: 100%;
+    overflow-y: auto;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.label {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+form {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+button[type="submit"] {
+    align-self: flex-end;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.radius-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.radius-group input[type="number"] {
+    width: 70%;
+}
+
+.radius-group select {
+    width: 30%;
+}
+
+@media (max-width: 600px) {
+    .radius-group {
+    flex-direction: column;
+    }
+
+    .radius-group input[type="number"],
+    .radius-group select {
+    width: 100%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+}

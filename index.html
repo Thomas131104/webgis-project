@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Giới Thiệu Của Bạn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chủ đề: Bản đồ địa điểm giải trí</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Giới Thiệu</a>
+                <ul class="dropdown-content">
+                    <li><a href="#gioithieu-chung">Giới Thiệu Chung</a></li>
+                    <li><a href="#monhoc">Môn Học</a></li>
+                    <li><a href="#nhom_thanhvien">Nhóm & Thành Viên</a></li>
+                    <li><a href="#nganh_hoc">Ngành</a></li>
+                </ul>
+            </li>
+            <li><a href="public/main-program.html">Bản đồ</a></li>
+            <li><a href="Tự điền link">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="gioithieu" class="staggered-section">
+            <div class="content-block">
+                <div class="content-text">
+                    <h2 id="gioithieu-chung">Giới Thiệu Chung</h2>
+                    <p>Trang web này được tạo ra nhằm giới thiệu đến mọi người những địa điểm để chúng ta có những khoảnh khắc thư giãn, "chill" cùng bạn bè sau những giờ phút căng thẳng với công việc, cuộc sống.</p>
+                    <p>Chiếc web này sẽ không thể tránh khỏi những thiếu sót. Hi vọng mọi người sẽ góp ý chân thành để cả nhóm có thể chỉnh sửa nó thành phiên bản tốt nhất nha.</p>
+                </div>
+            </div>
+
+            <div id="monhoc" class="content-block">
+                <div class="content-text">
+                    <h3>Thông Tin Môn Học</h3>
+                    <p><strong>Tên môn học:</strong> Phát triển phần mềm GIS mã nguồn mở</p>
+                    <p><strong>Lớp:</strong> DH22HM</p>
+                    <p><strong>Giáo viên hướng dẫn:</strong>Thầy Đỗ Thành Long</p>
+                </div>
+            </div>
+
+            <div id="nhom_thanhvien" class="content-block">
+                <div class="content-text">
+                    <h3>Nhóm 7</h3>
+                    <table class="team-table">
+                        <thead>
+                            <tr>
+                                <th>Tên Thành Viên</th>
+                                <th>Mã Số Sinh Viên</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Võ Thị Thúy An</td><td>22166001</td></tr>
+                            <tr><td>Bùi Thanh Hoàng</td><td>22166026</td></tr>
+                            <tr><td>Lê Ngọc Anh Khoa</td><td>22166033</td></tr>
+                            <tr><td>Nguyễn Tuấn Kiệt</td><td>22166035</td></tr>
+                            <tr><td>Nguyễn Duy Kiệt</td><td>22166036</td></tr>
+                            <tr><td>Nguyễn Trần Khải Lâm</td><td>22166039</td></tr>
+                            <tr><td>Đặng Lê Bảo Trân</td><td>22166086</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="nganh_hoc" class="content-block">
+                <div class="content-text">
+                    <h3>Thông Tin Ngành</h3>
+                    <p><strong>Tên Ngành:</strong> Hệ thống thông tin</p>
+                    <p><strong>Khoa:</strong> Khoa Môi trường & Tài nguyên</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Nhóm 7</p>
+    </footer>
+
+    <script>
+        const dropdownBtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            dropdownContent.classList.toggle('show');
+        });
+
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
