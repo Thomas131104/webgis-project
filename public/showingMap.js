@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }).addTo(map);
 
         // Tải bản đồ Việt Nam
-        fetch("../data/vietnam_full.geojson")
+        fetch("/webgis_project/data/vietnam_full.geojson")
           .then(response => response.json())
           .then(data => {
             // Hiển thị polygon Việt Nam
